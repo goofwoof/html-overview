@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>练习-3：HTML Form</title>
-    <link href="style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -11,75 +11,91 @@
     <h1>Create a burger!</h1>
     <section class="protein">
         <label for="patty">What type of protein would you like?</label>
-        <br>
-        <input type="text" name="patty" id="patty">
+        <br/>
+        <input type="text" name="patty" id="patty" />
     </section>
 
     <section class="patties">
         <label for="amount">How many patties would you like?</label>
-        <br>
+        <br/>
         <!--说明：在此添加一个input for 'amount'，type 为number -->
-
+        <input type="number" name="amount" id="amount" />
     </section>
 
     <section class="cooked">
         <label for="doneness">How do you want your patty cooked</label>
-        <br>
+        <br/>
         <!--说明：在此添加一个input for 'doneness'，type: range, default value: 3, min: 0, max: 5, step: 1  -->
-
+        <label for="doneness">Rare</label>
+        <input type="range" name="doneness" id="doneness" default="3" min="0" max="5" step="1" />
+        <label for="doneness">Well-Done</label>
     </section>
 
     <section class="toppings">
         <span>What toppings would you like?</span>
-        <br>
+        <br/>
         <!--说明：在此添加一个checkbox, name: topping, value: lettuce, id: lettuce -->
+        <input type="checkbox" name="topping" value="lettuce" id="lettuce" />
 
         <!--说明：在此添加一个label for 'lettuce', content: Lettuce -->
-
+        <label for="lettuce">Lettuce</label>
         <!--说明：在此添加一个checkbox, name: topping, value: tomato, id: tomato -->
-
+        <input type="checkbox" name="topping" value="tomato" id="tomato" />
         <!--说明：在此添加一个label for 'tomato', content: Tomato-->
-
-        <input type="checkbox" name="topping" id="onion" value="onion">
+        <label for="tomato">Tomato</label>
+        
+        <input type="checkbox" name="topping" id="onion" value="onion" />
         <label for="onion">Onion</label>
     </section>
 
     <section class="cheesy">
         <span>Would you like to add cheese?</span>
-        <br>
-        <!--说明：在此添加一个radio, name: cheese, value: yes, id: yes -->
-
+        <br/>
+        <!--说明：在此添加一个radio, name: cheese, value: yes, id:yes  -->
+        <input type="radio" name="cheese" id="yes" value="yes" />
         <!--说明：在此添加一个label for 'yes' -->
-
-        <input type="radio" name="cheese" id="no" value="yes">
+        <label for="yes">Yes</label>
+        
+        <input type="radio" name="cheese" id="no" value="no" />
         <label for="no">No</label>
     </section>
 
     <section class="bun-type">
         <label for="bun">What type of bun would you like?</label>
-        <br>
+        <br/>
         <!--说明：在此添加一个select, name: bun, option list: sesame, potato, Salad-->
+        <select name="bun" id="bun">
+            <option value ="sesame">sesame</option>
+            <option value ="potato">potato</option>
+            <option value="Salad">Salad</option>
+        </select>
 
     </section>
 
     <section class="sauce-selection">
         <label for="sauce">What type of sauce would you like?</label>
-        <br>
-        <input list="sauces" id="sauce" name="sauce">
+        <br/>
+        <input list="sauces" id="sauce" name="sauce" />
 
         <!--说明：在此添加一个datalist, option list: ketchup, mayo, Other-->
+        <datalist id="sauces">
+            <option value="ketchup">ketchup</option>
+            <option value="mayo">mayo</option>
+            <option value="Other">Other</option>
+        </datalist>
 
     </section>
 
     <section class="extra-info">
         <label for="extra">Anything else you want to add?</label>
-        <br>
+        <br/>
         <!--说明：在此添加一个textarea, name:extra, rows: 3, cols:50-->
-
+        <textarea name="extra" id="extra" rows="3" cols="50"></textarea>
     </section>
 
     <section class="submission">
         <!--说明：在此添加一个input, type: submit, value: Submit -->
+        <input type="submit" value="Submit" />
 
     </section>
 </form>
